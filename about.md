@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+- `웹프로그래밍 / 빅데이터` 에 관심 많음
 
-### More Information
+### Speciallity
 
-A place to include any other types of information that you'd like to include about yourself.
+1. SpringBoot
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[lovehopy1@gmail.com](mailto:lovehopy1@gmail.com)
