@@ -67,6 +67,7 @@ GET /product/1
 - HATEOAS
   - links : 더 자세한 정보를 제공함
   - 나머지는 일반 리턴값과 동일
+  
 ```json
 {
   "_links": {
@@ -104,3 +105,77 @@ GET /product/1
 }
 ```
 
+## 프로젝트 세팅
+
+```java
+public class Customer extends RepresentationModel<Customer> {
+
+    private String customerId;
+    private String customerName;
+    private String companyName;
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
+}
+```
+
+```java
+@RestController
+public class CustomerController {
+
+    private CustomerService customerService;
+
+    public CustomerController(CustomerService customerService) {
+        this.customerService = customerService;
+    }
+
+    @GetMapping("/{customerId}")
+    public Customer getCustomerById(@PathVariable String customerId) {
+        Customer customer = customerService.getCustomerDetail(customerId);
+        customer.add(linkTo(methodOn(CustomerController.class).getCustomerById(customerId)).withSelfRel());
+        customer.add(linkTo(methodOn(CustomerController.class).getCustomerById(customerId)).withRel("/sample rel"));
+        return customer;
+    }
+}
+```
+
+```java
+@RestController
+public class CustomerController {
+
+    private CustomerService customerService;
+
+    public CustomerController(CustomerService customerService) {
+        this.customerService = customerService;
+    }
+
+    @GetMapping("/{customerId}")
+    public Customer getCustomerById(@PathVariable String customerId) {
+        Customer customer = customerService.getCustomerDetail(customerId);
+        customer.add(linkTo(methodOn(CustomerController.class).getCustomerById(customerId)).withSelfRel());
+        customer.add(linkTo(methodOn(CustomerController.class).getCustomerById(customerId)).withRel("/sample rel"));
+        return customer;
+    }
+}
+```
