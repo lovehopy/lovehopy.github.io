@@ -159,23 +159,3 @@ public class CustomerController {
     }
 }
 ```
-
-```java
-@RestController
-public class CustomerController {
-
-    private CustomerService customerService;
-
-    public CustomerController(CustomerService customerService) {
-        this.customerService = customerService;
-    }
-
-    @GetMapping("/{customerId}")
-    public Customer getCustomerById(@PathVariable String customerId) {
-        Customer customer = customerService.getCustomerDetail(customerId);
-        customer.add(linkTo(methodOn(CustomerController.class).getCustomerById(customerId)).withSelfRel());
-        customer.add(linkTo(methodOn(CustomerController.class).getCustomerById(customerId)).withRel("/sample rel"));
-        return customer;
-    }
-}
-```
