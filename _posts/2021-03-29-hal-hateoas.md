@@ -7,7 +7,7 @@ tags:
 - tags
 ---
 
-![](../img/interface.png)
+![](/img/interface.png)
 
 ## 개요
 
