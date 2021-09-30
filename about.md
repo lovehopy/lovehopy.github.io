@@ -19,6 +19,8 @@ permalink: /about/
 
 # 👩🏻‍🏫 Description
 
+![img_4.png](img_4.png)
+
 ---
 
 ## 👉🏻 내일로그램(RailroGRAM)
