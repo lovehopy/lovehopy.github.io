@@ -20,12 +20,12 @@ avatar: /images/logo.jpg
 # and URL Link(e.g. 'Theme' tab below) tabs. If you don't need one, just delete
 # it from the list(Delete '- name: ' and 'url: ', too!)
 navigation:
-  - name: About
-    url: /about
-   - name: Description
-    url: /description
   - name: Blog
     url: /
+  - name: About
+    url: /about
+  - name: Description
+    url: /description
   - name: Archive
     url: /archive
 
