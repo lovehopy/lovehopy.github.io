@@ -3,10 +3,10 @@
 #
 
 # Name of your site (displayed in the header)
-name: 소녀K양
+name: Angella 😇
 
 # Short bio or description (displayed in the header)
-description: 개발자
+description: Developer, Back-end going to be Full-stack
 
 #
 # Flags below are optional
@@ -49,7 +49,7 @@ footer-links:
   youtube: # channel/<your_long_string> or user/<user-name>
 
 # Text under the icons in footer
-footer-text: © 2021 HJKIM
+footer-text: © 2021 Angella
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
